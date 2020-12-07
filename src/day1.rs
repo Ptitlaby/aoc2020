@@ -1,6 +1,4 @@
-use std::fs::File;
-use std::io::{self, BufRead};
-use std::path::Path;
+use crate::utils::read_lines;
 
 pub(crate) fn main() {
     let filename = "B:\\Dev\\Rust\\projects\\aoc2020\\input\\1.1.txt";
@@ -151,12 +149,4 @@ fn find_sum_3(vec_numbers: &[i32], sum :i32) -> (i32,i32,i32) {
         }
     }
     return find_sum_3(slice, sum);
-}
-
-
-
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where P: AsRef<Path>, {
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
 }
