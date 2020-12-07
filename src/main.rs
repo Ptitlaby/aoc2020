@@ -1,11 +1,14 @@
 #![allow(dead_code)]
-mod day1;
-mod day2;
-mod day3;
+#[macro_use] extern crate lazy_static;
 
 mod utils;
 
+mod day1;
+mod day2;
+mod day3;
+mod day4;
+
 fn main() {
     println!("Hello, world - Advent of Code 2020!");
-    day3::main();
+    day4::main();
 }
