@@ -71,7 +71,7 @@ fn validate_passports(passport : &str) -> bool{
         static ref RE_HGT :Regex = Regex::new(r"hgt:(\d+)(cm|in)").unwrap();
         static ref RE_HCL :Regex = Regex::new(r"hcl:(#[0-9a-f]{6})").unwrap();
         static ref RE_ECL :Regex = Regex::new(r"ecl:(amb|blu|brn|gry|grn|hzl|oth)").unwrap();
-        static ref RE_PID :Regex = Regex::new(r"pid:([0-9]{9})").unwrap();
+        static ref RE_PID :Regex = Regex::new(r"pid:([0-9]{9})(\s|$)").unwrap();
     }
 
     if RE_BYR.is_match(passport)
@@ -179,10 +179,11 @@ fn validate_passports(passport : &str) -> bool{
     }
     else
     {
-        //println!("Wrong PID for passport {}",passport);
+        println!("Wrong PID for passport : {}",passport);
         return false;
     }
 
     //println!("Valid passport [{}]",passport);
+    //println!("{}",passport);
     return true;
 }
