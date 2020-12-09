@@ -149,7 +149,7 @@ fn validate_passports(passport : &str) -> bool{
     if RE_HCL.is_match(passport)
     {
         let caps = RE_HCL.captures(passport).unwrap();
-        let hcl = caps.get(1).map_or("err", |m| m.as_str());
+        let _hcl = caps.get(1).map_or("err", |m| m.as_str());
         //print!("HCL[{}] ",hcl);
     }
     else
@@ -161,7 +161,7 @@ fn validate_passports(passport : &str) -> bool{
     if RE_ECL.is_match(passport)
     {
         let caps = RE_ECL.captures(passport).unwrap();
-        let ecl = caps.get(1).map_or("err", |m| m.as_str());
+        let _ecl = caps.get(1).map_or("err", |m| m.as_str());
         //print!("ECL[{}] ",ecl);
     }
     else
@@ -174,7 +174,7 @@ fn validate_passports(passport : &str) -> bool{
     if RE_PID.is_match(passport)
     {
         let caps = RE_PID.captures(passport).unwrap();
-        let pid = caps.get(1).map_or("err", |m| m.as_str());
+        let _pid = caps.get(1).map_or("err", |m| m.as_str());
         //print!("PID[{}] ",pid);
     }
     else
