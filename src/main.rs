@@ -11,8 +11,9 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 fn main() {
     println!("Hello, world - Advent of Code 2020!");
-    day8::main();
+    day9::main();
 }
