@@ -1,7 +1,5 @@
 use crate::utils::read_lines;
 use std::collections::{VecDeque};
-use std::process::exit;
-
 
 pub(crate) fn main() {
 
