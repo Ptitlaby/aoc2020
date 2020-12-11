@@ -1,7 +1,6 @@
 use crate::utils::read_lines;
 use std::collections::{HashMap};
 use std::time::Instant;
-use std::borrow::Borrow;
 
 pub(crate) fn main() {
 
@@ -15,9 +14,9 @@ pub(crate) fn main() {
 
     // p1
     let filename = "B:\\Dev\\Rust\\projects\\aoc2020\\input\\10.txt";
-    let beginP1 = Instant::now();
+    let begin_p1 = Instant::now();
     let ret = p1(filename);
-    println!("Answer for part 1 is [{}]. Computed in {:?}",ret,beginP1.elapsed());
+    println!("Answer for part 1 is [{}]. Computed in {:?}",ret,begin_p1.elapsed());
 
 
     // Tests p2
@@ -35,9 +34,9 @@ pub(crate) fn main() {
 
     // p2
     let filename = "B:\\Dev\\Rust\\projects\\aoc2020\\input\\10.txt";
-    let beginP2 = Instant::now();
+    let begin_p2 = Instant::now();
     let ret = p2(filename);
-    println!("Answer for part 2 is [{}]. Computed in {:?}",ret,beginP2.elapsed());
+    println!("Answer for part 2 is [{}]. Computed in {:?}",ret,begin_p2.elapsed());
 
 }
 
